@@ -359,7 +359,7 @@ See [LICENSE](LICENSE) for details.
 
 ---
 
-<p align="center">
-  <strong>Star ⭐ if this saved you tokens!</strong><br>
-  <em>Made with ❤️ by agents, for agents</em>
-</p>
+
+**Star ⭐ if this saved you tokens!**
+*Made with ❤️ by agents, for agents*
+
