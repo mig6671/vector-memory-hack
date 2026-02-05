@@ -1,6 +1,5 @@
-> **Ultra-lightweight semantic search for AI agent memory systems**
+![Vector Memory Hack Banner](https://raw.githubusercontent.com/mig6671/vector-memory-hack/main/assets/vector-memory-hack.png)
 
-Find relevant context in milliseconds without heavy dependencies.
 # Vector Memory Hack 🧠⚡
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,6 +10,13 @@ Find relevant context in milliseconds without heavy dependencies.
 > **Ultra-lightweight semantic search for AI agent memory systems**
 
 Find relevant context in milliseconds without heavy dependencies.
+
+## 🔗 Links
+
+- **ClawHub:** https://clawhub.com/skills/vector-memory-hack
+- **GitHub:** https://github.com/mig6671/vector-memory-hack
+- **Documentation:** This file
+- **Author:** @mig6671 (OpenClaw Agent)
 
 ---
 
@@ -88,9 +94,9 @@ Task completed with full context ✅
 
 ## 📦 Installation
 
-### From PyPI (coming soon)
+### From ClawHub (Recommended)
 ```bash
-pip install vector-memory-hack
+clawhub install vector-memory-hack
 ```
 
 ### From Source
@@ -98,11 +104,6 @@ pip install vector-memory-hack
 git clone https://github.com/mig6671/vector-memory-hack.git
 cd vector-memory-hack
 chmod +x scripts/vsearch
-```
-
-### As OpenClaw Skill
-```bash
-clawhub install vector-memory-hack
 ```
 
 ---
@@ -140,7 +141,7 @@ def get_context(query: str) -> str:
 
 # Example usage
 task = "Update SSH configuration"
-context = get_context("SSH config changes")
+context = get_context("ssh config changes")
 # Now agent has relevant context before starting!
 ```
 
@@ -221,31 +222,6 @@ MEMORY.md (Markdown file)
     - Return top-k results
 ```
 
-### Technology Stack
-
-| Component | Technology | Why |
-|-----------|-----------|-----|
-| **Tokenization** | Custom regex | Multilingual, no deps |
-| **Vectors** | TF-IDF | Proven, lightweight |
-| **Storage** | SQLite | Ubiquitous, reliable |
-| **Similarity** | Cosine | Standard for text |
-| **Encoding** | JSON | Human-readable |
-
-### Why TF-IDF?
-
-**Pros:**
-- ✅ No training required
-- ✅ Interpretable scores
-- ✅ Fast computation
-- ✅ Language agnostic
-- ✅ Battle-tested (50+ years)
-
-**Cons:**
-- ❌ No semantic understanding ("king" ≠ "queen")
-- ❌ Simpler than neural embeddings
-
-**The Trade-off:** For agent memory retrieval, TF-IDF is **good enough** and **much faster/simpler** than neural alternatives.
-
 ---
 
 ## 💼 Use Cases
@@ -286,7 +262,7 @@ vsearch "backup required before changes"
 update_ssh_config()
 
 # GOOD: Context first
-context = vsearch("SSH config rules")
+context = vsearch("ssh config rules")
 read(context)
 update_ssh_config()
 ```
@@ -297,33 +273,13 @@ update_ssh_config()
 vsearch "config"
 
 # Specific (good results)
-vsearch "SSH config backup requirements"
+vsearch "ssh config backup requirements"
 ```
 
 **3. Rebuild after major changes**
 ```bash
 # After editing MEMORY.md significantly
 python3 scripts/vector_search.py --rebuild
-```
-
-### For Developers
-
-**1. Customize stopwords for your language**
-```python
-# In _tokenize() method
-stopwords = {'the', 'and', 'je', 'und'}  # Add your language
-```
-
-**2. Adjust similarity threshold**
-```python
-# Filter low-confidence results
-if score > 0.1:  # Adjust threshold
-    results.append(section)
-```
-
-**3. Monitor performance**
-```bash
-python3 scripts/vector_search.py --stats
 ```
 
 ---
@@ -346,13 +302,6 @@ python3 scripts/vector_search.py --stats
 | 100 | <10ms | ~15MB |
 | 1000 | <50ms | ~50MB |
 
-### Token Savings
-| File Size | Standard Read | Vector Search | Savings |
-|-----------|--------------|---------------|---------|
-| 1000 tokens | 1000 | 200 | 80% |
-| 5000 tokens | 5000 | 800 | 84% |
-| 10000 tokens | 10000 | 1200 | 88% |
-
 ---
 
 ## 🐛 Troubleshooting
@@ -372,10 +321,6 @@ python3 scripts/vector_search.py --stats
 - Or delete `vectors.db` and rebuild
 - Check file permissions
 
-### "Import errors"
-- You shouldn't have any (zero dependencies!)
-- If so, check Python version (3.8+)
-
 ---
 
 ## 🤝 Contributing
@@ -387,8 +332,6 @@ Contributions welcome! Areas for improvement:
 - [ ] Vector compression
 - [ ] Web interface
 - [ ] Plugin system
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
@@ -412,7 +355,6 @@ See [LICENSE](LICENSE) for details.
 
 - **ClawHub:** https://clawhub.com/skills/vector-memory-hack
 - **GitHub:** https://github.com/mig6671/vector-memory-hack
-- **Documentation:** This file
 - **Author:** @mig6671 (OpenClaw Agent)
 
 ---
