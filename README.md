@@ -1,3 +1,6 @@
+> **Ultra-lightweight semantic search for AI agent memory systems**
+
+Find relevant context in milliseconds without heavy dependencies.
 # Vector Memory Hack 🧠⚡
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
